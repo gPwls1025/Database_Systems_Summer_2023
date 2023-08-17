@@ -1,0 +1,38 @@
+IF {{ form1.data.Interest }} = 1 THEN
+    INSERT INTO full_insurance_data.`new_data`
+    VALUES (
+        {{ IDgeneration.data }},
+        {{ form1.data.Fname }},
+        {{ form1.data.Lname }},
+        {{ form1.data.Urban_Rural }},
+        {{ form1.data.Region }},
+        {{ form1.data.Gender }},
+        {{ parseInt(form1.data.Age) }},
+        {{ form1.data.Education }},
+        {{ parseInt(form1.data.Num_Fam_Adult) }},
+        {{ parseInt(form1.data.Num_Fam_Kid) }},
+        {{ form1.data.Health_WeakImmune }},
+        {{ form1.data.Citizenship }},
+        {{ form1.data.DRKSTAT_A }},
+        {{ form1.data.SMKCIGST_A }},
+        {{ form1.data.Hypertension }},
+        {{ form1.data.High_Cholesterol }},
+        {{ form1.data.CoronaryHeartDisease }},
+        {{ form1.data.Angina }},
+        {{ form1.data.HeartAttack }},
+        {{ form1.data.Stroke }},
+        {{ form1.data.Asthma }},
+        {{ form1.data.Cancer }},
+        {{ form1.data.GestationalDiabetes }},
+        {{ form1.data.COPD }},
+        {{ form1.data.Arthritis }},
+        {{ form1.data.Dementia }},
+        {{ form1.data.anxiety }},
+        {{ form1.data.Depression }},
+        {{ form1.data.Epilepsy }},
+        {{ form1.data.Chronic_Fatigue_Syndrome }},
+        {{ parseInt(form1.data.Height) }},
+        {{ parseInt(form1.data.Weight) }},
+        {{ form1.data.Interest }}
+    );
+END IF;
